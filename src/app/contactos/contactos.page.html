@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>contactos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/tabs/nuevocontacto" routerDirection="forward">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list>
+    <ion-item *ngFor="let contactoItem of contactos$" (click)="selectContacto(contactoItem.id)">
+      <ion-label><h2>{{contactoItem.telefono}} {{contactoItem.apellido}}</h2>
+      <br>
+      <p>{{contactoItem.telefono}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

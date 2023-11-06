@@ -35,6 +35,14 @@ const routes: Routes = [
       {
         path: 'editarcontacto/:id',
         loadChildren: () => import('../editarcontacto/editarcontacto.module').then(m => m.EditarcontactoPageModule)
+      },
+      {
+        path: 'login',
+        loadChildren: () => import('../login/login.module').then( m => m.LoginPageModule)
+      },
+      {
+        path: 'register',
+        loadChildren: () => import('../register/register.module').then( m => m.RegisterPageModule)
       }
     ]
   },
